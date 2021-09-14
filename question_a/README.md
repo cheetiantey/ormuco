@@ -1,5 +1,5 @@
 # Usage
-Run the file:
+Run the test file:
 ```
-python3 lines_overlap.java
+python3 test.py
 ```
