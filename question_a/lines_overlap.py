@@ -17,22 +17,20 @@
 
 import sys
 
-def main():
-    if len(sys.argv) == 5:
-        line1 = [sys.argv[1], sys.argv[2]]
-        line2 = [sys.argv[3], sys.argv[4]]
+# Returns True if the two lines overlap, otherwise return False
+def overlap(a1, a2, b1, b2):
+    line1 = [a1, a2]
+    line2 = [b1, b2]
 
-        # Case 1: line 1 lies to the left of line2
-        if line1[1] <= line2[0]:
-            print("Does not overlap")
+    # Case 1: line 1 lies to the left of line2
+    if line1[1] <= line2[0]:
+        return False
 
-        # Case 2: line 2 lies to the left of line1
-        elif line2[1] <= line1[0]:
-            print("Does not overlap")
+    # Case 2: line 2 lies to the left of line1
+    elif line2[1] <= line1[0]:
+        return False
 
-        # The two lines must overlap
-        else:
-            print("Overlap")
+    # The two lines must overlap
+    else:
+        return True
 
-if __name__ == "__main__":
-    main()
