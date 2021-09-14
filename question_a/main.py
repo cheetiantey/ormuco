@@ -23,10 +23,15 @@ def main():
         line1 = [sys.argv[1], sys.argv[2]]
         line2 = [sys.argv[3], sys.argv[4]]
 
+        # Case 1: line 1 lies to the left of line2
         if line1[1] <= line2[0]:
             print("Does not overlap")
+
+        # Case 2: line 2 lies to the left of line1
         elif line2[1] <= line1[0]:
             print("Does not overlap")
+            
+        # The two lines must overlap
         else:
             print("Overlap")
 
